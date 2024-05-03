@@ -1,21 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
+import type { MaisonRecord } from "@/type";
 
-interface MaisonRecord {
-  adresse: string
-  collectionId: string
-  collectionName: string
-  created: string
-  favori: boolean
-  id: string
-  image: string
-  nbChambres: number
-  nbSdb: number
-  nomMaison: string
-  prix: number
-  surface: number
-  updated: string
-} 
   
 const maisonsListe: MaisonRecord[] = [
 {
