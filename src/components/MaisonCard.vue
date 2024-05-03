@@ -11,7 +11,7 @@ const props = defineProps<MaisonRecord>()
       <div
         class="w-[360px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
       ></div>
-      <img src="" class="w-[360px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
+      <img src="/src/assets/images/4a94c054-1858-4e1f-971c-44c76a16cea8.webp" class="w-[360px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
     </div>
     <div
       class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4 px-5 py-7"
