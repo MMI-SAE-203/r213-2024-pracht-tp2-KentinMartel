@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-const maisonsListe: {
+
+interface MaisonRecord {
   adresse: string
   collectionId: string
   collectionName: string
@@ -14,8 +15,10 @@ const maisonsListe: {
   prix: number
   surface: number
   updated: string
-}[] = [
-  {
+} 
+  
+const maisonsListe: MaisonRecord[] = [
+{
     adresse: '20 place de Ferrier, Bayonne ',
     collectionId: 'nxoouoovor5zn6o',
     collectionName: 'maison',
