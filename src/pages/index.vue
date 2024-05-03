@@ -86,4 +86,5 @@ console.log(maisonsListe)
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
+  <MaisonCard v-bind="maisonsListe[0]" />
 </template>
