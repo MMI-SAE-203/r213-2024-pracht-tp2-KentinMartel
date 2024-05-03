@@ -1,20 +1,17 @@
-<script setup lang=ts>
-import type { MaisonRecord } from '@/types'
+<script setup lang="ts">
+import type { MaisonRecord } from '@/type'
 
-const props: MaisonRecord = defineProps<MaisonRecord>()
+const props = defineProps<MaisonRecord>()
 </script>
 <template>
-<div
+  <div
     class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative rounded-lg bg-white border-[1.5px] border-indigo-100"
   >
     <div class="self-stretch flex-grow-0 flex-shrink-0 h-[200px]">
       <div
         class="w-[360px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
       ></div>
-      <img
-        src="/"
-        class="w-[360px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover"
-      />
+      <img src="" class="w-[360px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
     </div>
     <div
       class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4 px-5 py-7"
@@ -23,7 +20,7 @@ const props: MaisonRecord = defineProps<MaisonRecord>()
         <div class="flex-grow-0 flex-shrink-0 w-[249px] h-[75px]">
           <div class="flex justify-start items-end w-[164.11px] absolute left-0 top-0 gap-0.5">
             <p class="flex-grow-0 flex-shrink-0 text-2xl font-bold text-left text-indigo-500">
-              $3,100
+              ${{ prix }}
             </p>
             <p class="flex-grow-0 flex-shrink-0 w-[58px] h-8 text-base text-left text-gray-500">
               /month
@@ -32,7 +29,7 @@ const props: MaisonRecord = defineProps<MaisonRecord>()
           <p
             class="w-[249px] absolute left-0 top-[43px] text-2xl font-semibold text-left text-gray-900"
           >
-            Cover Red
+            {{ nomMaison }}
           </p>
         </div>
         <svg
@@ -44,7 +41,14 @@ const props: MaisonRecord = defineProps<MaisonRecord>()
           class="flex-grow-0 flex-shrink-0 w-12 h-12"
           preserveAspectRatio="xMidYMid meet"
         >
-          <circle cx="24" cy="24" r="23.25" fill="white" stroke="#E0E7FF" stroke-width="1.5"></circle>
+          <circle
+            cx="24"
+            cy="24"
+            r="23.25"
+            fill="white"
+            stroke="#E0E7FF"
+            stroke-width="1.5"
+          ></circle>
           <path
             d="M16.318 18.318C15.9002 18.7359 15.5687 19.232 15.3425 19.778C15.1164 20.3239 15 20.9091 15 21.5C15 22.091 15.1164 22.6762 15.3425 23.2221C15.5687 23.7681 15.9002 24.2642 16.318 24.682L24 32.364L31.682 24.682C32.526 23.8381 33.0001 22.6935 33.0001 21.5C33.0001 20.3066 32.526 19.162 31.682 18.318C30.8381 17.4741 29.6935 17 28.5 17C27.3066 17 26.162 17.4741 25.318 18.318L24 19.636L22.682 18.318C22.2642 17.9002 21.7681 17.5687 21.2221 17.3425C20.6762 17.1164 20.091 17 19.5 17C18.9091 17 18.3239 17.1164 17.778 17.3425C17.232 17.5687 16.7359 17.9002 16.318 18.318V18.318Z"
             stroke="#6366F1"
@@ -55,7 +59,7 @@ const props: MaisonRecord = defineProps<MaisonRecord>()
         </svg>
       </div>
       <p class="self-stretch flex-grow-0 flex-shrink-0 w-80 text-base text-left text-gray-500">
-        243 CurlewRoad, PalmHarbor, TX
+        {{ adresse }}
       </p>
       <svg
         width="320"
@@ -103,7 +107,7 @@ const props: MaisonRecord = defineProps<MaisonRecord>()
           </svg>
           <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
             <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">4</p>
-            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Beds</p>
+            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{nbChambres}}</p>
           </div>
         </div>
         <div class="flex justify-center items-center flex-grow relative gap-2">
@@ -153,7 +157,7 @@ const props: MaisonRecord = defineProps<MaisonRecord>()
             </defs>
           </svg>
           <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-1">
-            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">2</p>
+            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{nbSdb}}</p>
             <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Bathrooms</p>
           </div>
         </div>
@@ -197,7 +201,7 @@ const props: MaisonRecord = defineProps<MaisonRecord>()
             </defs>
           </svg>
           <div class="flex justify-end items-center flex-grow-0 flex-shrink-0 relative gap-1">
-            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">6x7.5</p>
+            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{surface}}</p>
             <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">m²</p>
           </div>
         </div>
