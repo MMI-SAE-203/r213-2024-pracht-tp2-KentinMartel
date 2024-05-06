@@ -11,7 +11,10 @@ const props = defineProps<MaisonRecord>()
       <div
         class="w-[360px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
       ></div>
-      <img src="/src/assets/images/4a94c054-1858-4e1f-971c-44c76a16cea8.webp" class="w-[360px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover" />
+      <img
+        src="/src/assets/images/4a94c054-1858-4e1f-971c-44c76a16cea8.webp"
+        class="w-[360px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover"
+      />
     </div>
     <div
       class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-4 px-5 py-7"
@@ -106,8 +109,10 @@ const props = defineProps<MaisonRecord>()
             ></path>
           </svg>
           <div class="flex justify-start items-center flex-grow-0 flex-shrink-0 relative gap-1">
-            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">4</p>
-            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{nbChambres}}</p>
+            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">
+              {{ nbChambres }}
+            </p>
+            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Chambres</p>
           </div>
         </div>
         <div class="flex justify-center items-center flex-grow relative gap-2">
@@ -157,7 +162,7 @@ const props = defineProps<MaisonRecord>()
             </defs>
           </svg>
           <div class="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-1">
-            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{nbSdb}}</p>
+            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{ nbSdb }}</p>
             <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">Bathrooms</p>
           </div>
         </div>
@@ -201,7 +206,7 @@ const props = defineProps<MaisonRecord>()
             </defs>
           </svg>
           <div class="flex justify-end items-center flex-grow-0 flex-shrink-0 relative gap-1">
-            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{surface}}</p>
+            <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">{{ surface }}</p>
             <p class="flex-grow-0 flex-shrink-0 text-xs text-left text-gray-600">m²</p>
           </div>
         </div>
