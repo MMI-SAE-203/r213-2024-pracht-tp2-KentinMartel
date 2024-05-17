@@ -2,10 +2,10 @@
 <script setup lang="ts">
 import MaisonCard from "@/components/MaisonCard.vue";
 import { Collections, type MaisonResponse } from "@/pocketbase-types";
-import { allMaisonsFavori } from '@/backend'
+import { allMaisonSorted } from '@/backend'
 
 
-const maisonListe = await allMaisonsSorted()
+const maisonListe = await allMaisonSorted()
 console.log(maisonListe)
   
 /* const maisonsListe: MaisonResponse[] = [
