@@ -11,7 +11,7 @@ onErrorCaptured((err, instance, info) => {
 
 <template>
   <header>
-    <nav>
+   <nav>
   <ul>
     <li>
       <RouterLink to="/">Accueil</RouterLink>
