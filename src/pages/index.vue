@@ -88,7 +88,7 @@ console.log(maisonsListe) */
 </script>
 
 <template>
-  <h1 class="text-2xl">Bonjour monde !</h1>
+  <h1 class="text-2xl">Liste des maisons</h1>
   <ul>
     <li v-for="uneMaison of maisonListe" :key="uneMaison.id">
     <RouterLink
