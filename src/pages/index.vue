@@ -1,14 +1,14 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import MaisonCard from "@/components/MaisonCard.vue";
-import type { MaisonRecord } from "@/type";
+import { Collections, type MaisonResponse } from "@/pocketbase-types";
 
   
-const maisonsListe: MaisonRecord[] = [
+const maisonsListe: MaisonResponse[] = [
 {
     adresse: '20 place de Ferrier, Bayonne ',
     collectionId: 'nxoouoovor5zn6o',
-    collectionName: 'maison',
+    collectionName: Collections.Maison,
     created: '2024-04-11 12:24:03.398Z',
     favori: true,
     id: 'sllqar9aewe0m3i',
@@ -23,7 +23,7 @@ const maisonsListe: MaisonRecord[] = [
   {
     adresse: '20 du coquelicot ',
     collectionId: 'nxoouoovor5zn6o',
-    collectionName: 'maison',
+    collectionName: Collections.Maison,
     created: '2024-04-11 12:26:01.918Z',
     favori: true,
     id: 'vfnfnlwcc018rag',
@@ -38,7 +38,7 @@ const maisonsListe: MaisonRecord[] = [
   {
     adresse: '10 rue Victor Hugo',
     collectionId: 'nxoouoovor5zn6o',
-    collectionName: 'maison',
+    collectionName: Collections.Maison,
     created: '2024-04-11 12:28:07.137Z',
     favori: false,
     id: '113e3fikgk4n5jf',
@@ -54,7 +54,7 @@ const maisonsListe: MaisonRecord[] = [
   {
     adresse: '20 impasse Dubois ',
     collectionId: 'nxoouoovor5zn6o',
-    collectionName: 'maison',
+    collectionName: Collections.Maison,
     created: '2024-04-11 12:30:27.157Z',
     favori: true,
     id: 'rmc4f4wam8erjle',
@@ -69,7 +69,7 @@ const maisonsListe: MaisonRecord[] = [
   {
     adresse: '7 avenue LesCharmants',
     collectionId: 'nxoouoovor5zn6o',
-    collectionName: 'maison',
+    collectionName: Collections.Maison,
     created: '2024-04-11 12:32:29.917Z',
     favori: false,
     id: 'lwwm9nj2q7cvtr5',
@@ -87,5 +87,6 @@ console.log(maisonsListe)
 
 <template>
   <h1 class="text-2xl">Bonjour monde !</h1>
-<MaisonCard v-bind="maisonsListe[0]" />
+  <MaisonCard v-for="maison in maisonsListe" :key="maison.nomMaison" v-bind="maison" />
+
 </template>
