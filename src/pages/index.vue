@@ -1,11 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import MaisonCard from "@/components/MaisonCard.vue";
-import { allMaisonSorted } from '@/backend'
+import MaisonCard from '@/components/MaisonCard.vue'
+import { allMaisonsFavori } from '@/backend'
 
+const maisonListe = await allMaisonsFavori()
 
-const maisonListe = await allMaisonSorted()
-  
 /* const maisonsListe: MaisonResponse[] = [
 {
     adresse: '20 place de Ferrier, Bayonne ',
@@ -88,20 +87,20 @@ console.log(maisonsListe) */
 </script>
 
 <template>
-  <h1 class="text-2xl">Liste des maisons</h1>
+  <h1 class="text-2xl">Liste des maisons favorites</h1>
   <ul>
     <li v-for="uneMaison of maisonListe" :key="uneMaison.id">
-    <RouterLink
-      :to="{
-        name: '/offres/[id]',
-        params: {
-          id: uneMaison.id
-        }
-      }"
-      class="text-red-400 hover:text-red-600"
-    >
-      {{ uneMaison.nomMaison }}
-    </RouterLink>
-  </li>
-</ul>
+      <RouterLink
+        :to="{
+          name: '/offres/[id]',
+          params: {
+            id: uneMaison.id
+          }
+        }"
+        class="text-red-400 hover:text-red-600"
+      >
+        {{ uneMaison.nomMaison }}
+      </RouterLink>
+    </li>
+  </ul>
 </template>
