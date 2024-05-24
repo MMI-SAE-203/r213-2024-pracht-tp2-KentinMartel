@@ -17,7 +17,7 @@ console.log(agentsListe)
     <h1 class="text-xl">{{ agent.prenom }} {{ agent.nom }}</h1>
     <h2>Offres gérés</h2>
     <div class="flex">
-      <AgentCard v-for="agent in agentsListe" v-bind="agent" :key="agent.id" />
+      <AgentCard v-for="agent in agentListe" v-bind="agent" :key="agent.id" />
     </div>
   </div>
 </template>
